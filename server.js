@@ -5,13 +5,38 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+var articleOne = {
+	title : 'Vishwa article-one',
+	heading : 'article-one',
+	date : 'Oct 26th',
+	content : `Nothing
+	 nothing
+	 nothing`
+};
+
+function createData(data)
+{   var title = data.title;
+    var heading = data.heading;
+    var date= data.date;
+    var content = data.content;
+    var htmltemplate = `
+    <html>
+        <title>${title}</title>
+        <h1>${heading}</h1>
+        <h2>${date}</h2>
+        <p>${content}</p>
+    </html>`;
+    return htmltemplate
+}
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/article-one',function(req,res)
 {
-  res.send('Article one requested and will be served here');
+  res.send(createData(articleOne));
 });
 
 app.get('/article-two',function(req,res)
