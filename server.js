@@ -15,8 +15,8 @@ var articles = {
 	 nothing`
     },
     'article-two': {
-	title : 'Vishwa article-one',
-	heading : 'article-one',
+	title : 'Vishwa article-two',
+	heading : 'article-two',
 	date : 'Oct 27th',
 	content : `Nothing
 	 nothing
@@ -47,6 +47,7 @@ app.get('/', function (req, res) {
 app.get('/:articleName',function(req,res)
 {
   var articleName= req.params.articleName;
+  print (articleName);
   res.send(createData(articles[articleName]));
 });
 
