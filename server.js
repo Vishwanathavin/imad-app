@@ -17,7 +17,7 @@ var articles = {
     'article-two': {
 	title : 'Vishwa article-one',
 	heading : 'article-one',
-	date : 'Oct 26th',
+	date : 'Oct 27th',
 	content : `Nothing
 	 nothing
 	 nothing`
