@@ -46,6 +46,7 @@ app.get('/', function (req, res) {
 
 app.get('/:articleName',function(req,res)
 {
+    articleName= req.params.articleName
   res.send(createData(articles[articleName]));
 });
 
