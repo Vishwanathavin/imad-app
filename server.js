@@ -22,7 +22,7 @@ var articles = {
 	 nothing
 	 nothing`
     }
-}
+};
 
 function createData(data)
 {   var title = data.title;
