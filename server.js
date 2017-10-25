@@ -19,14 +19,14 @@ function createData(data)
     var heading = data.heading;
     var date= data.date;
     var content = data.content;
-    var htmltemplate = `
-    <html>
+    var htmltemplate = 
+    `<html>
         <title>${title}</title>
         <h1>${heading}</h1>
         <h2>${date}</h2>
         <p>${content}</p>
     </html>`;
-    return htmltemplate
+    return htmltemplate;
 }
 
 
